@@ -11,9 +11,6 @@ function ProductDetail() {
     const product = useSelector((state)=>state.singleProduct.product)
     const loader = useSelector((state)=>state.singleProduct.loader)
 
-    // console.log(product);
-    // console.log(prId);
-
     useEffect(()=>{
         dispatch(fetchSingleProduct(prId))
     }, [])

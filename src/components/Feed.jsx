@@ -13,6 +13,7 @@ function Feed() {
         return state.products.products
     })
     // console.log(JSON.stringify(products));
+    // console.log(products);
     
     useEffect(() => {
         dispatch(fetchProducts())

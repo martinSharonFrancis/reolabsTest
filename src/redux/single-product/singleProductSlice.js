@@ -1,14 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import api from "../../api/api";
 
 const initialState = {
     loader: false,
     product: {},
     error: ''
 }
-const fetchSingleProduct = createAsyncThunk('singleProduct/fetchSingleProduct', async (prId = 1) => {
-    
-        const res = await axios.get(`https://fakestoreapi.com/products/${prId}`);
+const fetchSingleProduct = createAsyncThunk('singleProduct/fetchSingleProduct', async (prId = 1) => {        
+        const res = await api.get(`products/${prId}`);
         return res.data
     })
 const singleProductSlice = createSlice({
