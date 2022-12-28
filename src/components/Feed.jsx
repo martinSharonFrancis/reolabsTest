@@ -23,7 +23,7 @@ function Feed() {
         <>        
             {
                  
-                loader ? <Loader /> : <Paginate products={products} />
+                products.length ? <Paginate products={products} />: <Loader/>
             }
         </>
     )
