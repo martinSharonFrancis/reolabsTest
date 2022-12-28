@@ -1,0 +1,16 @@
+.productDetail{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+.productDetail > div{
+    padding: 0 20px;
+}
+.productDetail .left{
+    flex-basis: 320px;
+    max-width: 320px;
+}
+.productDetail .right{
+    flex-basis: calc(100% - 320px);
+    max-width: calc(100% - 320px);
+}
